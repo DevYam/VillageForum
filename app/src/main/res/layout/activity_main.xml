@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrl"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/ScrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Village Forum"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/welcome"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Name"
+        android:layout_below="@+id/edit_text"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/name"
+        android:layout_marginTop="25dp"
+
+        />
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:inputType="text|textMultiLine"
+        android:gravity="top"
+        android:layout_below="@id/welcome"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textAlignment="center"
+        android:hint="Enter the announcement"
+        tools:ignore="RtlCompat"
+        android:background="@drawable/stroke"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Post"
+        android:onClick="onBtnClick"
+        android:id="@+id/post"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nothing to post?\nClick here to Visit forum"
+        android:textAlignment="center"
+        android:layout_below="@+id/post"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:onClick="navigateToForum"
+        android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+</ScrollView>
