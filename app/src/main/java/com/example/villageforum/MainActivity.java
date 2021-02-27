@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
     String post = "";
     String name = "";
+
+    // This value should be set based on the video that is being played
+    String chapter = "ch1";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             postData.put("name", name);
             postData.put("post", post);
+            postData.put("chapter",chapter);
 
         } catch (JSONException e) {
             e.printStackTrace();

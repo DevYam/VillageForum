@@ -22,7 +22,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Posts extends AppCompatActivity {
+
+    // This value should be based on the video that is being played
+
+    String chapter = "ch1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +40,7 @@ public class Posts extends AppCompatActivity {
 
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="http://api.ncertguruji.com/getJson.php";
+        String url ="http://api.ncertguruji.com/getJson.php?chapter="+chapter;
         JsonObjectRequest request = new JsonObjectRequest(url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
